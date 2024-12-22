@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
     public int maxKDivisibleComponents(int n, int[][] edges, int[] values, int k) {
         List<Integer>[] adjList=new ArrayList[n];
