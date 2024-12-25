@@ -1,0 +1,54 @@
+package solutionCodingStudio;
+
+import java.util.Scanner;
+
+//import sun.security.util.Length;
+
+class Solution {
+ public static int[] getSecondOrderElements(int n, int []a) {
+     // Write your code here.
+     int largest=a[0];
+		int secLargest=Integer.MIN_VALUE;
+     int minimum=a[0];
+     int secMinimum=Integer.MAX_VALUE;
+     int arr1[]=new int[2];
+		for(int i=0;i<n;i++){
+			if(a[i]>largest){
+				secLargest=largest;
+				largest=a[i];
+			}else if(a[i]<largest && a[i]>secLargest){
+				secLargest=a[i];
+			}
+		}
+     // System.out.print(secMinimum);
+     for(int i=0;i<n;i++){
+         if(a[i]<minimum){
+             secMinimum=minimum;
+             minimum=a[i];
+         }else if(a[i]>minimum && a[i]<secMinimum){
+             secMinimum=a[i];
+         }
+     }
+     arr1[0]=secLargest;
+     arr1[1]=secMinimum;
+
+     
+		return arr1;
+ }
+}
+public class secondOrderElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+		}
+		Solution sol=new Solution();
+		System.out.println(sol.getSecondOrderElements(n,arr));
+
+	}
+
+}
