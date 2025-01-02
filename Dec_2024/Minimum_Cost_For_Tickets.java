@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 class Solution {
     public int mincostTickets(int[] days, int[] costs) {
         HashSet<Integer> set=new HashSet<>();
