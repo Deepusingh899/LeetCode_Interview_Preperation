@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
     public int[] vowelStrings(String[] words, int[][] queries) {
         int count=0;
