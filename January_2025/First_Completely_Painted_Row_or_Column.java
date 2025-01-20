@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public int firstCompleteIndex(int[] arr, int[][] mat) {
         int n=mat.length;
