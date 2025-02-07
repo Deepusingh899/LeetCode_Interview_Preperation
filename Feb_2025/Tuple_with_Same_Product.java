@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public int tupleSameProduct(int[] nums) {
         Map<Integer, Integer> productCount = new HashMap<>();
@@ -12,7 +15,11 @@ class Solution {
         // Calculate the number of valid tuples
         int total = 0;
         for (int count : productCount.values()) {
-        if (count >= 2) {
-        total += count * (count - 1) / 2;
+            if (count >= 2) {
+                total += count * (count - 1) / 2;
+                // return total;
+            }
+        }
+        return total*8;
     }
 }
