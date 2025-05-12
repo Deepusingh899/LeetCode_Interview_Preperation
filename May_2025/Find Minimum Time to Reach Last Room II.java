@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.PriorityQueue;
+
 class Solution {
     static public int minTimeToReach(int[][] moveTime) {
          int r = moveTime.length, c = moveTime[0].length;
